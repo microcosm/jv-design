@@ -23,8 +23,8 @@
       }
 
       #left {
-        background: url(http://www.johnvarvatos.com/Media/VARV/Homepage/20130911-01-home-5-1.jpg);
-        background: url(/assets/juanes.jpg);
+        background: url(/assets/20130911-01-home-5-1.jpg);
+        /*background: url(/assets/juanes.jpg);*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -33,8 +33,9 @@
 
       #right {
         width: 62%;
-        background: url(http://i1.ytimg.com/vi/XX4qrcAOqBU/maxresdefault.jpg);
-        background: url(/assets/juanes.jpg);
+        background: url(/assets/maxresdefault.jpg);
+        background: url(/assets/willie1.jpg);
+        /*background: url(/assets/juanes.jpg);*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position: right;
@@ -57,7 +58,7 @@
 
       @-webkit-keyframes fadeIn {
         from {
-          -webkit-filter: grayscale(0.5) blur(8px) saturate(0);
+          -webkit-filter: grayscale(0.5) blur(16px) saturate(0);
         }
         18% {
           -webkit-filter: grayscale(0) blur(2px) saturate(1);
@@ -72,7 +73,7 @@
           -webkit-filter: grayscale(0) blur(0px) saturate(1);
         }
         to {
-          -webkit-filter: grayscale(0.5) blur(8px) saturate(0);
+          -webkit-filter: grayscale(0.5) blur(16px) saturate(0);
         }
       }
 
@@ -93,42 +94,60 @@
       }
 
       #logo {
-        width: 100%;
-        height: 200px;
+        width: 944px; height: 200px;
         position: absolute; bottom: 20%; left: 7.2%;
+        /*border: 1px dashed green;*/
       }
 
-      #logo a {
+      #logo div {
+        /*border: 1px solid red;*/
+        width: 200px;
+      }
+
+      #logo div a {
         font-size: 4.5em;
         color: red;
         text-decoration: none;
-        float: left;
       }
 
-      a#jv {
+      #jv {
+        position: relative; left: 200px;
+
+      }
+
+      #shop {
+        position: absolute; left: 0; top: 46px;
+      }
+
+      #world {
+        position: absolute; right: 0; top: 46px;
+      }
+
+      #jv a {
         background: url(/assets/john_varvatos_logo.png) no-repeat;
-        width: 566px; height: 139px; display: block;
+        width: 566px; height: 139px;
+        display: block;
       }
 
-      a#shop {
+      #shop a {
         margin: 0.63em;
       }
 
-      a#world {
+      #world a {
         margin: 0.63em;
       }
     </style>
     <script src="/assets/jquery.min.js"></script>
     <script type="text/javascript">
       $(window).load(function(){
-        $('#right').hover(function(){
-          $('#shop').hide();
-          $('#world').show();
+        /*$('#right').hover(function(){
+          $('#shop a').hide();
+          $('#world a').show();
         });
         $('#left').hover(function(){
-          $('#shop').show();
-          $('#world').hide();
-        });
+          $('#shop a').show();
+          $('#world a').hide();
+        });*/
       });
     </script>
   </head>
@@ -145,9 +164,15 @@
         </div>
       </a>
       <div id="logo">
-        <a id="shop" href="style_substance.html">shop</a>
-        <a id="jv" href="style_substance.html"></a>
-        <a id="world" href="style_substance.html">world</a>
+        <div id="shop">
+          <a href="style_substance.html">shop</a>
+        </div>
+        <div id="jv">
+          <a href="style_substance.html"></a>
+        </div>
+        <div id="world">
+          <a href="style_substance.html">world</a>
+        </div>
       </div>
     </div>
   </body>
