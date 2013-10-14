@@ -1,18 +1,19 @@
-# Ignore bundler config
-/.bundle
-
-# Ignore the default SQLite database.
-/db/*.sqlite3
-
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
-
-config/database.yml
-config/feature.yml
-dump.rdb
-.DS_Store
-.Gemfile
+*.log
+*.pid
+*.tar.gz
+.DS_Store				# mac ox directory / thumbnail files
 .idea
+.project
 .sass-cache
-.env
+.yardoc
+/.bundle
+config/application.yml
+config/database.yml
+db/*.sqlite3
+doc/api
+doc/app
+log/*.log
+public/system
+public/uploads/*		# from s3
+tmp/
+tmp/restart.txt

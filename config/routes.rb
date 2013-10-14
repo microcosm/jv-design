@@ -1,4 +1,10 @@
 Jv::Application.routes.draw do
+
+  resources :page
+
+  root :to => 'page#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
